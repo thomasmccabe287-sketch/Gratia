@@ -1,0 +1,59 @@
+{% extends "Layout.html" %}
+{% from "_macros.html" import secretariat_card %}
+
+{% block title %}About Us — Gratia MUN{% endblock %}
+
+{% block content %}
+
+<section class="mission-section">
+  <div class="container text-center">
+    <h2 class="mission-title">
+      gratia:<br>
+      <span class="mission-pos">/noun/</span><br>
+      The Latin word for grace.
+    </h2>
+    <p class="mission-quote">
+      "Gratia Model UN, rooted in the Catholic tradition of service and justice,
+      invites students of all backgrounds to engage in meaningful dialogue,
+      global problem-solving, and compassionate leadership for the common good."
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="secretariat-section">
+    <h2 class="section-title">Meet our Secretariat</h2>
+    <div class="row g-4">
+      {% for member in secretariat %}
+      <div class="col-6 col-md-4 text-center">
+        {{ secretariat_card(member) }}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="production-section text-center">
+    <h2 class="section-title">Special thanks to our production team!</h2>
+
+    <div class="row justify-content-center">
+        {% for person in production_team %}
+
+        <div class="col-md-5">
+            <p class="production-name">
+                {{ person.Person }}, {{ person.Position }}
+            </p>
+
+            <p class="person-email">
+                <a href="mailto:{{ person.Email }}">
+                    {{ person.Email }}
+                </a>
+            </p>
+        </div>
+
+        {% endfor %}
+    </div>
+  </section>
+
+
+{% endblock %}

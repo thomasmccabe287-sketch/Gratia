@@ -1,0 +1,22 @@
+# Shown on the Delegate Resources page.
+# "photo" is the filename inside static/images/.
+
+- name: Dress Code Guide
+  photo: conference/dress_code_guide.png
+  url: https://www.canva.com/design/DAHR1oboB2U/UOFu3kDZCsqacJW5ilvttA/edit
+
+- name: Flow of Debate Guide
+  photo: conference/flow_of_debate.png
+  url: https://www.canva.com/design/DAGwuhYBkPc/JA6mIX_Taz6IJto38NE3Bg/view?utm_content=DAGwuhYBkPc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hdc2d4509a5
+
+- name: Parliamentary Procedure Guide
+  photo: conference/parlipro_guide.png
+  url: https://docs.google.com/document/d/1eDamUSm_h5ui7srek8LuFFb6riefhShLY7guoogrsMk/edit?usp=sharing
+
+- name: Position Paper Guide
+  photo: conference/position-paper-guide_orig.png
+  url: https://docs.google.com/document/d/1hkNvGUHcstb77ahcKb2OUF3bJg7nWc61IrDMqE-S1_M/edit?tab=t.0
+
+- name: Scoring Rubric
+  photo: conference/scoringrubric.png
+  url: https://docs.google.com/document/d/19WmS8Ira7OYGQgjBmAnXayYVt6mRUn9ZGe4ztJ8lrs0/edit?tab=t.0

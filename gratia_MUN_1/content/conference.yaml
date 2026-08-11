@@ -1,0 +1,47 @@
+# Shown on the Conference Info page.
+#
+# Two fields control the "Registration is open! ..." line at the top:
+# registration_status is the short phrase, registration_window is the
+# date range that follows it. Change registration_status to
+# "Registration has closed." once it ends.
+
+date: November 14, 2026
+registration_status: Registration is open!
+registration_window: August 15, 2026 - October 25, 2026
+
+# Each fee is a [label, price] pair.
+fees:
+  - [School Fee, "$25"]
+  - [Sponsor Fee, "$20"]
+  - [Delegate Fee, "$25"]
+  - [Lunch Fee (optional), "$10"]
+
+fee_note: >
+  Chick-fil-A catering lunch box including: chicken sandwich, chips,
+  cookie. Only checks and online payments received by or before
+  11/04/2026 will be accepted. Day-of payments will NOT be accepted.
+
+# Each schedule row is a [time, event] pair, shown in this order.
+schedule:
+  - ["8:15 AM– 9:00 AM", Registration]
+  - ["9:00 AM– 9:45 AM", Opening Ceremony]
+  - ["10:00 AM– 11:40 AM", Session 1]
+  - ["11:40 AM– 12:00 PM", Break]
+  - ["12:00 PM– 1:30 PM", Session 2]
+  - ["1:30 PM– 2:30 PM", Lunch]
+  - ["2:30 PM– 3:50 PM", Session 3]
+  - ["3:50 PM– 4:50 PM", Delegate Mixer]
+  - ["4:50 PM– 5:45 PM", Closing Ceremony/Awards]
+
+# External links — leave as "" if not ready yet, and the page will
+# just not show that link.
+additional_info_url: https://docs.google.com/document/d/1H7hXkY8uKj4XfQsTxv7B3aVK0Tfhb96H9l81iyEqy4Q/edit?tab=t.0
+campus_map_url: https://www.canva.com/design/DAGwhi1Kp3U/-KBja8CKiy0GIN_es9ZjIQ/view?utm_content=DAGwhi1Kp3U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h178ad98c29
+
+# Photos — filenames inside static/images/.
+enrollment_photo: conference/Placeholder.png
+venue_photo: resources/iwhs_map.png
+
+venue_name: Incarnate Word High School
+venue_address: 727 E Hildebrand Ave, San Antonio, TX 78212
+venue_note: "*Campus is wheelchair accessible"

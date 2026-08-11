@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gratia MUN{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{{ site.description }}{% endblock %}">
+
+    <!-- Open Graph / link preview tags (Discord, iMessage, Slack, Facebook, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gratia MUN">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:title" content="{% block og_title %}{{ site.og_title }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ site.description }}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{{ site.og_image }}{% endblock %}">
+
+    <!-- Twitter/X falls back to og:* tags, but these override with a larger image card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ self.og_title() }}">
+    <meta name="twitter:description" content="{{ self.og_description() }}">
+    <meta name="twitter:image" content="{{ self.og_image() }}">
+
+    <!--Favicon Links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/site.webmanifest') }}">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?...">
+
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+
+ <body class="{% block body_class %}{% endblock %}">
+
+    <nav class="navbar navbar-expand-md site-nav sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Gratia MUN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            {% for item in navigation %}
+
+            <li class="nav-item">
+                <a class="nav-link {% if active_page == item.endpoint %}active{% endif %}"
+                  href="{{ url_for(item.endpoint) }}">
+                  {{ item.title }}
+                </a>
+            </li>
+
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
+          <svg class="bi" width="30" height="24" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© {{ site.year }} Gratia - Model UN</span>
+      </div> <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-body-secondary" href="#" aria-label="Instagram">
+            <svg class="bi" width="24" height="24" aria-hidden="true">
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
+        </li>
+         <li class="ms-3">
+          <a class="text-body-secondary" href="#" aria-label="Facebook">
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    </body>
+

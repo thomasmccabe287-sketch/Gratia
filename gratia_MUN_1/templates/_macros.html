@@ -1,0 +1,54 @@
+{#
+  Reusable card macros. Import this into any template that needs one
+  of these patterns, e.g.:
+
+    {% from "_macros.html" import committee_card %}
+
+  Each macro takes a single dict (matching the shape used in data.py)
+  and returns the HTML for one card. It does NOT loop — the calling
+  template still does the {% for %} and decides the grid/column wrapper,
+  since column widths differ per page.
+#}
+
+{% macro secretariat_card(member) %}
+
+<img
+    src="{{ url_for('static', filename='images/' ~ member.photo) }}"
+    alt="{{ member.name }}"
+    class="member-photo"
+>
+
+<p class="member-name">
+    {{ member.name }}, {{ member.title }}
+</p>
+
+<p class="member-email">
+    <a href="mailto:{{ member.email }}">
+        {{ member.email }}
+    </a>
+</p>
+
+{% endmacro %}
+
+
+{% macro committee_card(committee) %}
+<div class="committee-card">
+  <img src="{{ url_for('static', filename='images/' ~ committee.photo) }}"
+       alt="{{ committee.name }} chairs" class="committee-photo">
+  <h2 class="committee-name">{{ committee.name }}</h2>
+  <p class="committee-chairs">Chairs: {{ committee.chairs }}</p>
+  <p class="committee-topic">Topic: {{ committee.topic }}</p>
+  <a href="{{ committee.paper_url }}" target="_blank" rel="noopener" class="resource-link">
+    {{ committee.paper_label }}
+  </a>
+</div>
+{% endmacro %}
+
+
+{% macro guide_card(guide) %}
+<a href="{{ guide.url }}" target="_blank" rel="noopener" class="guide-card">
+  <img src="{{ url_for('static', filename='images/' ~ guide.photo) }}"
+       alt="{{ guide.name }}" class="guide-photo">
+  <span class="guide-name">{{ guide.name }}</span>
+</a>
+{% endmacro %}

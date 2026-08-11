@@ -1,0 +1,75 @@
+{% extends "Layout.html" %}
+
+{% block title %}Gratia MUN{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">11 / 14</p>
+    <h1 class="hero-title">Gratia Model UN</h1>
+    <p class="hero-subtitle">Incarnate Word High School</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <hr class="section-divider">
+
+  <section class="about-section">
+    <h2 class="section-title">What is Gratia MUN?</h2>
+    <div class="row align-items-center g-4">
+      <div class="col-md-4 text-center">
+        <img src="{{ url_for('static', filename='images/logo/2026_LOGO.png') }}"
+             alt="Gratia Model UN logo" class="about-logo">
+      </div>
+      <div class="col-md-8">
+        <p class="about-text">
+          Gratia Model UN is an entirely student-led Model United Nations conference
+          hosted by Incarnate Word High School. Gratia is focused on improving the youth of San Antonio
+          through its environment of collaboration and diplomacy, as well as embodying Incarnate Word’s
+          core values of compassion, integrity, service, stewardship, academic excellence, and community of faith.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="committee-match text-center py-5">
+    <div class="container">
+
+```
+    <h2 class="section-title">Find Your Committee Match!</h2>
+
+    <p class="section-subtitle">
+        Not sure which committee is right for you?
+        Take our quiz to find your best match!
+    </p>
+
+    <a
+        href="https://forms.gle/bEQmdxiSLGszhPuX8"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary">
+        Take the Committee Quiz
+    </a>
+
+    </div>
+```
+
+</section>
+
+
+
+  <hr class="section-divider">
+
+  <section class="contact-section text-center">
+    <h2 class="section-title">Questions?</h2>
+    <p class="contact-text">
+      Contact us at
+      <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+    </p>
+  </section>
+
+</div>
+
+{% endblock %}

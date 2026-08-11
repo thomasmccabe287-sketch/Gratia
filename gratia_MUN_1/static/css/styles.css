@@ -1,0 +1,649 @@
+:root {
+  --color-text: #2a2a2a;
+  --color-muted: #6b6b6b;
+  --color-bg-alt: #c7c8c7;
+  --color-dark-bg: #1e2720;
+  --color-dark-text: #eeeee6;
+  --color-banner-bg: #1e2330;
+  --font-heading: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+/* ===== Nav ===== */
+.site-nav {
+  background-color: #111;
+}
+
+.site-nav .navbar-brand,
+.site-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+}
+
+.site-nav .nav-link.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ===== Shared section styles ===== */
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 3rem 0;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title.text-start {
+  text-align: left;
+}
+
+.section-subtitle {
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.resource-link {
+  display: inline-block;
+  font-weight: 600;
+  color: #3387a2;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+}
+
+.info-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Simple dark page banner (Committees, Delegate Resources) */
+.page-banner {
+  background-color: var(--color-banner-bg);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.page-banner-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ===== Home page ===== */
+.hero {
+  background: url("../images/logo/iwhs.jpg") center/cover no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-inner {
+  opacity: 0; /* animated in via script.js */
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0.25em 0;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+}
+
+.about-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.about-text,
+.contact-text {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-section {
+  margin: 4rem 0;
+}
+
+/* ===== About Us page ===== */
+.mission-section {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  padding: 4rem 0;
+}
+
+.mission-title {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.mission-pos {
+  font-family: var(--font-mono);
+}
+
+.mission-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.5rem;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.secretariat-section {
+  padding: 4rem 0 2rem;
+}
+
+.member-photo {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.member-name {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.member-email a {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.production-section {
+  padding: 2rem 0 3rem;
+}
+
+.production-name {
+  font-weight: 500;
+}
+
+/* ===== Conference Info page ===== */
+.enrollment-section,
+.schedule-section {
+  padding: 3rem 0;
+}
+
+.fee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.fee-list li {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.fee-note {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.schedule-heading {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.schedule-list li {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+  font-size: 0.95rem;
+}
+
+.schedule-time {
+  font-weight: 700;
+  min-width: 150px;
+}
+
+.venue-address {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.venue-note {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+/* ===== Committees page ===== */
+.committees-section {
+  padding: 3rem 0;
+}
+
+.committee-card {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.committee-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.committee-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.committee-chairs {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.committee-topic {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.acknowledgement-section {
+  padding: 3rem 0 4rem;
+}
+
+.acknowledgement-logo {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+}
+
+.acknowledgement-text {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* ===== Delegate Resources page ===== */
+.delegate-note-section {
+  padding: 3rem 0 1rem;
+}
+
+.delegate-note-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 820px;
+}
+
+.guides-section {
+  padding: 2rem 0 4rem;
+}
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.guide-photo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.guide-card:hover .guide-photo {
+  transform: scale(1.03);
+}
+
+.guide-name {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+/* ===== 404 page ===== */
+.not-found-section {
+  padding: 4rem 0 6rem;
+}
+
+.not-found-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+}
+
+/* =========================================================
+   404 page — TV "no signal" color bars
+   Opts out of the standard nav/footer via body.page-404,
+   and builds its own full-bleed layout instead.
+========================================================= */
+
+body.page-404 .site-nav,
+body.page-404 footer {
+  display: none;
+}
+
+body.page-404 {
+  margin: 0;
+}
+
+.tv-404 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-404-hero {
+  position: relative;
+  flex: 1;
+  min-height: calc(100vh - 56px); /* viewport minus the footer bar */
+  overflow: hidden;
+}
+
+/* ---- Transparent nav overlaying the color bars ---- */
+.tv-404-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+.tv-404-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: #111;
+  text-decoration: none;
+}
+
+.tv-404-links {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tv-404-links a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.tv-404-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---- SMPTE-style color bars ---- */
+.tv-404-bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.tv-404-bars span {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.tv-404-bars span:nth-child(1) { background: #f2f2f2; }
+.tv-404-bars span:nth-child(2) { background: #e8e419; }
+.tv-404-bars span:nth-child(3) { background: #22e0e0; }
+.tv-404-bars span:nth-child(4) { background: #22c93e; }
+.tv-404-bars span:nth-child(5) { background: #e619d8; }
+.tv-404-bars span:nth-child(6) { background: #e61919; }
+.tv-404-bars span:nth-child(7) { background: #1c2ee0; }
+
+/* thin broadcast-style divider line, a third of the way down */
+.tv-404-bars::before {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg, #1c2ee0, #e61919, #e619d8, #22c93e, #22e0e0, #e8e419, #f2f2f2
+  );
+  z-index: 1;
+}
+
+/* small color ticks near the bottom edge, like a broadcast bar chart */
+.tv-404-bars span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 18%;
+  background: inherit;
+}
+
+.tv-404-bars span::before {
+  content: "";
+  position: absolute;
+  bottom: 18%;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background: #0a0a0a;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tv-404-bars {
+    animation: tv-404-flicker 6s infinite;
+  }
+}
+
+@keyframes tv-404-flicker {
+  0%, 96%, 100% { filter: brightness(1); }
+  97% { filter: brightness(0.9); }
+  98% { filter: brightness(1.05); }
+}
+
+/* ---- Center message ---- */
+.tv-404-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.tv-404-glitchbox {
+  background: #0a0a0a;
+  padding: 1.5rem 3rem;
+}
+
+.tv-404-glitch-text {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 6vw, 3.25rem);
+  letter-spacing: 0.08em;
+  color: #f4f4f4;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tv-404-glitch-text::before,
+  .tv-404-glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+
+  .tv-404-glitch-text::before {
+    color: #22e0e0;
+    animation: tv-404-glitch-1 3.2s infinite linear alternate-reverse;
+  }
+
+  .tv-404-glitch-text::after {
+    color: #e619d8;
+    animation: tv-404-glitch-2 2.6s infinite linear alternate-reverse;
+  }
+}
+
+@keyframes tv-404-glitch-1 {
+  0%   { clip-path: inset(0 0 88% 0); transform: translate(-1px, -1px); }
+  20%  { clip-path: inset(60% 0 5% 0); transform: translate(1px, 0); }
+  40%  { clip-path: inset(20% 0 60% 0); transform: translate(-1px, 1px); }
+  60%  { clip-path: inset(75% 0 10% 0); transform: translate(1px, -1px); }
+  80%  { clip-path: inset(10% 0 80% 0); transform: translate(0, 1px); }
+  100% { clip-path: inset(40% 0 40% 0); transform: translate(-1px, 0); }
+}
+
+@keyframes tv-404-glitch-2 {
+  0%   { clip-path: inset(70% 0 15% 0); transform: translate(1px, 1px); }
+  25%  { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 0); }
+  50%  { clip-path: inset(45% 0 40% 0); transform: translate(1px, -1px); }
+  75%  { clip-path: inset(85% 0 5% 0); transform: translate(0, -1px); }
+  100% { clip-path: inset(25% 0 55% 0); transform: translate(-1px, 1px); }
+}
+
+.tv-404-play {
+  display: block;
+  margin: 1.25rem auto 0;
+  width: 28px;
+  height: 28px;
+}
+
+.tv-404-play svg {
+  width: 100%;
+  height: 100%;
+  fill: #e619d8;
+}
+
+/* ---- Bottom info bar ---- */
+.tv-404-footer {
+  background: #0a0a0a;
+  color: #fff;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  gap: 1rem;
+}
+
+.tv-404-code {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.tv-404-copy {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.tv-404-copy a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.tv-404-timer {
+  font-family: var(--font-mono);
+  color: #e619d8;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .tv-404-nav {
+    padding: 1rem;
+  }
+
+  .tv-404-links {
+    gap: 1rem;
+  }
+
+  .tv-404-links a {
+    font-size: 0.8rem;
+  }
+
+  .tv-404-glitchbox {
+    padding: 1rem 1.5rem;
+  }
+
+  .tv-404-footer {
+    font-size: 0.8rem;
+  }
+
+  .tv-404-copy {
+    font-size: 0.8rem;
+  }
+}

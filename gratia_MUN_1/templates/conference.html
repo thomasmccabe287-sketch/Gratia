@@ -1,0 +1,68 @@
+{% extends "Layout.html" %}
+
+{% block title %}Conference Info — Gratia MUN{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <section class="enrollment-section">
+    <h2 class="section-title">Enrollment</h2>
+    <p class="section-subtitle text-center">
+      {{ conference.registration_status }} {{ conference.registration_window }}
+    </p>
+
+    <div class="row align-items-center g-4">
+      <div class="col-md-6">
+        <ul class="fee-list">
+          {% for label, price in conference.fees %}
+          <li><span class="fee-label">{{ label }}</span><span class="fee-price">{{ price }}</span></li>
+          {% endfor %}
+        </ul>
+        <p class="fee-note">{{ conference.fee_note }}</p>
+      </div>
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/' ~ conference.enrollment_photo) }}"
+             alt="Delegates at a past conference" class="info-photo">
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="schedule-section">
+    <h2 class="section-title">Conference Information</h2>
+    <p class="section-subtitle text-center">Date: {{ conference.date }}</p>
+
+    <div class="row g-5">
+      <div class="col-md-5">
+        <h3 class="schedule-heading">Schedule</h3>
+        <ul class="schedule-list">
+          {% for time, event in conference.schedule %}
+          <li><span class="schedule-time">{{ time }}</span><span class="schedule-event">{{ event }}</span></li>
+          {% endfor %}
+        </ul>
+        {% if conference.additional_info_url %}
+        <a href="{{ conference.additional_info_url }}"
+           target="_blank" rel="noopener" class="resource-link">Additional Information</a>
+        {% endif %}
+      </div>
+
+      <div class="col-md-7">
+        <img src="{{ url_for('static', filename='images/' ~ conference.venue_photo) }}"
+             alt="{{ conference.venue_name }} campus" class="info-photo mb-3">
+        <h3 class="venue-address">
+          {{ conference.venue_name }}, {{ conference.venue_address }}<br>
+          <span class="venue-note">{{ conference.venue_note }}</span>
+        </h3>
+        {% if conference.campus_map_url %}
+        <a href="{{ conference.campus_map_url }}"
+           target="_blank" rel="noopener" class="resource-link">Campus Map</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}

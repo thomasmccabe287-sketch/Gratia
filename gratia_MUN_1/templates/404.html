@@ -1,0 +1,47 @@
+{% extends "Layout.html" %}
+
+{% block title %}No Signal — Gratia MUN{% endblock %}
+{% block body_class %}page-404{% endblock %}
+
+{% block content %}
+
+<div class="tv-404">
+
+  <div class="tv-404-hero">
+
+    <nav class="tv-404-nav" aria-label="Primary">
+      <a href="{{ url_for('index') }}" class="tv-404-logo">GRATIA MUN</a>
+      <ul class="tv-404-links">
+        {% for item in navigation %}
+        <li><a href="{{ url_for(item.endpoint) }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="tv-404-bars" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="tv-404-message">
+      <div class="tv-404-glitchbox">
+        <span class="tv-404-glitch-text" data-text="NO SIGNAL">NO SIGNAL</span>
+      </div>
+      <span class="tv-404-play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"></polygon></svg>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="tv-404-footer">
+    <span class="tv-404-code">404</span>
+    <p class="tv-404-copy">
+      Looks like this page got lost in the static.
+      <a href="{{ url_for('index') }}">Back to home</a>
+    </p>
+    <span class="tv-404-timer" id="tv404Timer" aria-hidden="true">00:00</span>
+  </div>
+
+</div>
+
+{% endblock %}

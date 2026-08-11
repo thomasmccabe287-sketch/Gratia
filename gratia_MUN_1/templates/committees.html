@@ -1,0 +1,45 @@
+{% extends "Layout.html" %}
+{% from "_macros.html" import committee_card %}
+
+{% block title %}Committees — Gratia MUN{% endblock %}
+
+{% block content %}
+
+<section class="page-banner">
+  <div class="container">
+    <h1 class="page-banner-title">Committees</h1>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="committees-section">
+    <div class="row g-4">
+      {% for committee in committees %}
+      <div class="col-md-6 col-lg-4">
+        {{ committee_card(committee) }}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="acknowledgement-section">
+    <div class="row align-items-center g-4">
+      <div class="col-md-3 text-center">
+        <img src="{{ url_for('static', filename='images/logo/CC_logo.png') }}"
+             alt="Central Catholic High School logo" class="acknowledgement-logo">
+      </div>
+      <div class="col-md-9">
+        <h2 class="acknowledgement-text">
+          Acknowledgement: Thank you so much to Central Catholic High School for
+          providing committee chairs for our conference!
+        </h2>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+# Site-wide settings, used across every page.
+# Update "year" each year for the footer copyright line.
+
+year: 2026
+contact_email: iwhsmun25@gmail.com
+og_title: Gratia Model UN
+description: >
+  Gratia Model UN is a student-led Model United Nations conference
+  hosted by Incarnate Word High School in San Antonio, TX.

@@ -1,0 +1,56 @@
+# Shown on the Committees page.
+# "photo" is the filename inside static/images/committees/.
+# "paper_url" is the link to the background paper document — if a
+# paper isn't ready yet, leave paper_url as an empty string ("").
+
+committees:
+  - name: General Assembly
+    photo: committees/ga_chairs.jpeg
+    chairs: Annabella Larez & Andrew Mefrige
+    topic: >
+      Developing Economic Recovery Models for Post-Conflict States
+      Through International Support
+    paper_label: GA Background Paper
+    paper_url: https://docs.google.com/document/d/1IBxI74A5c3I7QJP1iQCFRabLj-KTWRrO5jI1NZyRNfc/edit?tab=t.0
+
+  - name: World Health Organization
+    photo: committees/who_chairs.jpeg
+    chairs: Niabel Aguilar & Hilario Alvarado
+    topic: Addressing How Biological Warfare Can Be Prevented
+    paper_label: WHO Background Paper
+    paper_url: https://docs.google.com/document/d/1xPHeNoyW9tV3l_rY-MKJm96q5uUkv7QwNtYTc_83BJc/edit?usp=sharing
+
+  - name: Organization of American States
+    photo: committees/oas_chairs.jpeg
+    chairs: Andrea Abejuela & Noah Casias
+    topic: Addressing Extractivism in Latin America and its Effects
+    paper_label: OAS Background Paper
+    paper_url: https://docs.google.com/document/d/1sou4DgRZr7d5qCVm4b3lnBnBUlqykGrjL3O2hPJp6ZA/edit?usp=sharing
+
+  - name: Human Rights Council
+    photo: committees/hrc_chairs.jpeg
+    chairs: Juliet Rocha & Kai Claiborne
+    topic: Prevalence of Healthcare Disparities
+    paper_label: HRC Background Paper
+    paper_url: https://docs.google.com/document/d/12yL1JwurKh2IrGUvzyUloNnTNApuRCzJbWpFopzJwsQ/edit?usp=sharing
+
+  - name: Special Political and Decolonization
+    photo: committees/specpol_chairs.jpeg
+    chairs: Ava Rangel & Jared Campos (not pictured)
+    topic: Governance and Security in the Arctic
+    paper_label: SPECPOL Background Paper
+    paper_url: https://docs.google.com/document/d/1LuGUfRjghBUTe20NqWFQX9ZQmY07ben_Yt0PDCNLFhk/edit?usp=sharing
+
+  - name: "Crisis Room: Panem"
+    photo: committees/crisis_chairs.jpeg
+    chairs: Abigail Dunne & Andrew Broerman
+    topic: Discussing the Devastating Effects of the Firebombing in District 12
+    paper_label: Crisis Background Paper
+    paper_url: https://docs.google.com/document/d/1AOQqtffAqHLgvGBx3fywMjNKz_lq4nQbpfRW4e3_H_U/edit?usp=sharing
+
+# Shown below the committee list on the same page.
+acknowledgement:
+  text: >
+    Acknowledgement: Thank you so much to Central Catholic High School
+    for providing committee chairs for our conference!
+  logo: logo/CC_logo.png
