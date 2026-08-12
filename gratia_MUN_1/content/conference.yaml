@@ -21,6 +21,10 @@ fee_note: >
   cookie. Only checks and online payments received by or before
   11/04/2026 will be accepted. Day-of payments will NOT be accepted.
 
+fees_note: >
+  We also accept unattached students registering as individuals without a school. 
+  School and Sponsor Fee will not apply.
+
 # Each schedule row is a [time, event] pair, shown in this order.
 schedule:
   - ["8:15 AM– 9:00 AM", Registration]

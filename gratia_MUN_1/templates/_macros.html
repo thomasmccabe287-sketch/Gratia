@@ -11,28 +11,39 @@
 #}
 
 {% macro secretariat_card(member) %}
+<div class="secretariat-card"
+     data-name="{{ member.name }}"
+     data-title="{{ member.title }}"
+     data-email="{{ member.email }}"
+     data-photo="{{ url_for('static', filename='images/' ~ member.photo) }}">
 
-<img
-    src="{{ url_for('static', filename='images/' ~ member.photo) }}"
-    alt="{{ member.name }}"
-    class="member-photo"
->
+  <img
+      src="{{ url_for('static', filename='images/' ~ member.photo) }}"
+      alt="{{ member.name }}"
+      class="member-photo"
+  >
 
-<p class="member-name">
-    {{ member.name }}, {{ member.title }}
-</p>
+  <p class="member-name">
+      {{ member.name }}, {{ member.title }}
+  </p>
 
-<p class="member-email">
-    <a href="mailto:{{ member.email }}">
-        {{ member.email }}
-    </a>
-</p>
-
+  <p class="member-email">
+      <a href="mailto:{{ member.email }}">
+          {{ member.email }}
+      </a>
+  </p>
+</div>
 {% endmacro %}
 
 
 {% macro committee_card(committee) %}
-<div class="committee-card">
+<div class="committee-card"
+     data-name="{{ committee.name }}"
+     data-chairs="{{ committee.chairs }}"
+     data-topic="{{ committee.topic }}"
+     data-paper-label="{{ committee.paper_label }}"
+     data-paper-url="{{ committee.paper_url }}"
+     data-photo="{{ url_for('static', filename='images/' ~ committee.photo) }}">
   <img src="{{ url_for('static', filename='images/' ~ committee.photo) }}"
        alt="{{ committee.name }} chairs" class="committee-photo">
   <h2 class="committee-name">{{ committee.name }}</h2>

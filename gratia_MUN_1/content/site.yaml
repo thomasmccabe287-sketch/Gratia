@@ -7,3 +7,8 @@ og_title: Gratia Model UN
 description: >
   Gratia Model UN is a student-led Model United Nations conference
   hosted by Incarnate Word High School in San Antonio, TX.
+
+# Social links shown as icons in the footer. Leave a value as "" and
+# that icon won't be shown at all.
+instagram_url: "https://instagram.com/iwhsmun"
+facebook_url: ""
