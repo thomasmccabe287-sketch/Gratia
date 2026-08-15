@@ -1,9 +1,9 @@
 # Shown on the About Us page, under "Special thanks to our production team!"
 
-- Person: Maddie Cernoch
-  Position: Under Secretary General of Production
-  Email: maddie.cernoch@iwhs-satx.org
+- name: Maddie Cernoch
+  title: Under Secretary General of Production
+  email: maddie.cernoch@iwhs-satx.org
 
-- Person: Thomas McCabe
-  Position: Lead Web Designer and Coder
-  Email: tmccabe27@cchs-satx.org
+- name: Thomas McCabe
+  title: Lead Web Designer and Coder
+  email: tmccabe27@cchs-satx.org

@@ -1,3 +1,6 @@
+import os
+
+from jinja2 import StrictUndefined
 from flask import Flask, render_template, url_for
 from loader import (
     load_site,
@@ -9,6 +12,7 @@ from loader import (
 )
 
 app = Flask(__name__)
+app.jinja_env.undefined = StrictUndefined
 
 NAVIGATION = [
     {"title": "Home", "endpoint": "index"},
@@ -35,7 +39,7 @@ def inject_navigation():
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template("404.html"), 404
+    return render_template("404.html", active_page=None), 404
 
 @app.route("/")
 def index():
@@ -80,4 +84,5 @@ def delegate_resources():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug_mode = os.environ.get("FLASK_DEBUG", "1") == "1"
+    app.run(debug=debug_mode)
